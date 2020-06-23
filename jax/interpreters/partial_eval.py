@@ -411,7 +411,7 @@ def trace_to_jaxpr(fun: lu.WrappedFun, pvals: Sequence[PartialVal],
       { lambda ka ; ki ui.
         let c = add ui ka
         in (*, c) }   # known outputs are `*`
-     out_pvals = [PatialVal.known(6), PartialVal.unknown(ShapedArray)]
+     out_pvals = [PartialVal.known(6), PartialVal.unknown(ShapedArray)]
      consts = [3]  # the constant for `ka`
 
   When `instantiate=True` we get::
